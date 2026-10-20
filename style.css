@@ -1,0 +1,288 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f7, #ffe0ec);
+    color: #5a3d48;
+    overflow-x: hidden;
+}
+
+.birthday-card {
+    width: 90%;
+    max-width: 600px;
+    padding: 45px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.small-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #d96f94;
+    text-shadow: 2px 2px 5px rgba(217, 111, 148, 0.2);
+}
+
+.birthday-card > p {
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #e98aaa;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #d96f94;
+}
+
+.letter {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    text-align: left;
+    line-height: 1.7;
+    background: #fff7fa;
+    border-radius: 18px;
+}
+
+.letter h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.letter p {
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+}
+body::before {
+    content: "♡  ♥  ♡  ♥  ♡";
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    opacity: 0.25;
+    animation: floatHearts 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+.letter {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    text-align: left;
+    line-height: 1.7;
+    background: #fff7fa;
+    border-radius: 18px;
+    animation: openLetter 0.6s ease;
+}
+
+@keyframes openLetter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+button {
+    box-shadow: 0 5px 15px rgba(233, 138, 170, 0.4);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+h1 {
+    animation: titlePop 1s ease;
+}
+
+@keyframes titlePop {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.birthday-card {
+    animation: cardAppear 0.8s ease;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.letter {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f5d5e0;
+}
+
+.letter h2 {
+    color: #d96f94;
+}
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(233, 138, 170, 0.35);
+}
+.letter p {
+    margin-bottom: 18px;
+}
+
+.signature {
+    margin-top: 25px;
+    font-size: 18px;
+}
+@media (max-width: 600px) {
+    .birthday-card {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .letter {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+h1 {
+    text-shadow: 0 3px 8px rgba(217, 111, 148, 0.25);
+    letter-spacing: 1px;
+}
+.small-text {
+    font-style: italic;
+    color: #c77794;
+    letter-spacing: 1px;
+}
+button {
+    box-shadow: 0 0 15px rgba(233, 138, 170, 0.4);
+}
+button {
+    animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+body::after {
+    content: "♡  ♥  ♡  ♥  ♡";
+    position: fixed;
+    bottom: 8%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    opacity: 0.2;
+    animation: heartsFloat 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes heartsFloat {
+    0% {
+        transform: translateY(15px);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: translateY(-15px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0.15;
+    }
+}
+button::before {
+    content: "♡ ";
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+.letter p {
+    animation: textFade 0.8s ease;
+}
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
